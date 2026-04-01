@@ -26,6 +26,7 @@ async def main(email: str, phone: str, full_name: str, password: str) -> None:
     # Import bu yerda — skript app kontekstida ishlaganda ishlaydi
     from app.database import AsyncSessionLocal
     from app.models.user import User
+    from app.models import course, lesson, module, progress  # noqa: F401
     from app.core.security import hash_password
 
     # Parol minimal uzunlik tekshiruvi
