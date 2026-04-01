@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #F8F7FF;
+    --color-surface: #FFFFFF;
+    --color-text-primary: #1E1B4B;
+    --color-text-secondary: #6B7280;
+    --color-border: #E5E7EB;
+    --color-input-bg: #FFFFFF;
+    --color-sidebar: #FFFFFF;
+  }
+  .dark {
+    --color-bg: #0F0E17;
+    --color-surface: #1A1A2E;
+    --color-text-primary: #E8E6F0;
+    --color-text-secondary: #9CA3AF;
+    --color-border: #2D2B45;
+    --color-input-bg: #1C1A30;
+    --color-sidebar: #130F1E;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply transition-colors duration-300;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background-color: rgba(108,99,255,0.2); color: #4840B3; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(108,99,255,0.3); border-radius: 999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(108,99,255,0.6); }
+  *:focus-visible { @apply outline-none ring-2 ring-primary-500 ring-offset-2 ring-offset-white; }
+  .dark *:focus-visible { @apply ring-offset-gray-900; }
+}
+
+@layer components {
+  .bg-surface { background-color: var(--color-surface); }
+  .bg-app { background-color: var(--color-bg); }
+  .border-app { border-color: var(--color-border); }
+  .text-app-primary { color: var(--color-text-primary); }
+  .text-app-secondary { color: var(--color-text-secondary); }
+  .bg-sidebar { background-color: var(--color-sidebar); }
+  .bg-input { background-color: var(--color-input-bg); }
+  .gradient-primary { background: linear-gradient(135deg, #4840B3 0%, #6C63FF 60%, #857EFA 100%); }
+  .card-hover { @apply transition-all duration-200 hover:shadow-card-hover hover:-translate-y-0.5; }
+  .prose-lesson {
+    @apply text-gray-700 dark:text-gray-300 leading-relaxed;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+  .prose-lesson h2 { @apply text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4; }
+  .prose-lesson h3 { @apply text-lg font-semibold text-gray-900 dark:text-white mt-6 mb-3; }
+  .prose-lesson p { @apply mb-4; }
+  .prose-lesson ul { @apply list-disc pl-6 mb-4 space-y-1; }
+  .prose-lesson ol { @apply list-decimal pl-6 mb-4 space-y-1; }
+  .prose-lesson code { @apply bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-400 px-1.5 py-0.5 rounded text-sm font-mono; }
+  .prose-lesson pre { @apply bg-gray-900 text-gray-100 rounded-xl p-4 overflow-x-auto mb-4 text-sm; }
+  .prose-lesson blockquote { @apply border-l-4 border-primary-400 pl-4 italic text-gray-500 dark:text-gray-400 my-4; }
+}
+
+@layer utilities {
+  .transition-theme { @apply transition-colors duration-300 ease-in-out; }
+  .text-truncate { @apply truncate overflow-hidden whitespace-nowrap; }
+}

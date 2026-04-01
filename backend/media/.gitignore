@@ -1,0 +1,5 @@
+# Yuklangan media fayllarni git'da saqlama
+# Faqat papka tuzilmasini saqlaydigan .gitkeep fayllar qoladi
+*
+!.gitignore
+!**/.gitkeep

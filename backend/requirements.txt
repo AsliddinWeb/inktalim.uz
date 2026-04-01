@@ -1,0 +1,38 @@
+# ==============================================================
+# requirements.txt — barcha kutubxonalar versiyasi pinned
+# ==============================================================
+
+# Web framework
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+
+# Ma'lumotlar bazasi (async)
+sqlalchemy==2.0.36
+asyncpg==0.30.0
+alembic==1.14.0
+
+# Pydantic v2 (FastAPI bilan mos)
+pydantic==2.10.3
+pydantic-settings==2.7.0
+
+# Auth — JWT va parol xeshlash
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+# bcrypt 4.x passlib bilan mos kelmaydi — 3.2.2 da qolamiz
+bcrypt==3.2.2
+
+# HTTP form ma'lumotlari uchun (login form)
+python-multipart==0.0.19
+
+# .env faylni o'qish uchun
+python-dotenv==1.0.1
+
+# UUID uchun (Python standart kutubxona, qo'shimcha talab yo'q)
+# Sana/vaqt uchun
+pytz==2024.2
+
+# Email validatsiya (pydantic ichida)
+email-validator==2.2.0
+
+# PDF generatsiya (sertifikat uchun)
+reportlab==4.2.5

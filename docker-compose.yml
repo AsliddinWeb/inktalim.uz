@@ -1,0 +1,69 @@
+# Docker Compose — loyihaning barcha servislarini boshqaradi
+# 3 servis: db (PostgreSQL), backend (FastAPI), frontend (Vue3 + Nginx)
+
+name: inktalim
+
+services:
+  # ─── PostgreSQL ma'lumotlar bazasi ────────────────────────────────────────
+  db:
+    image: postgres:16
+    container_name: inktalim_db
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB:       ${POSTGRES_DB}
+      POSTGRES_USER:     ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      # Ma'lumotlar o'chib ketmasligi uchun volume
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      # DB tayyor bo'lguncha kutamiz
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # ─── FastAPI backend servisi ──────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: inktalim_backend
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8011:8000"
+    volumes:
+      # Yuklangan media fayllar — konteyner o'chirilsa ham saqlanadi
+      - ./backend/media:/app/media
+    # Backend faqat DB tayyor bo'lgandan keyin ishga tushadi
+    depends_on:
+      db:
+        condition: service_healthy
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+
+  # ─── Vue3 frontend servisi (Nginx) ────────────────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # /api/v1 nisbiy yo'l — ikkala domenga ham ishlaydi
+        VITE_API_URL: ${VITE_API_URL:-/api/v1}
+    container_name: inktalim_frontend
+    restart: unless-stopped
+    ports:
+      # Host nginx localhost:3000 ga proxy qiladi
+      - "3000:80"
+    # Frontend backend tayyor bo'lgandan keyin ishga tushadi
+    depends_on:
+      - backend
+
+volumes:
+  # PostgreSQL ma'lumotlarini saqlash uchun nom berilgan volume
+  postgres_data:
