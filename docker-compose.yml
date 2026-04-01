@@ -18,8 +18,6 @@ services:
     volumes:
       # Ma'lumotlar o'chib ketmasligi uchun volume
       - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
     healthcheck:
       # DB tayyor bo'lguncha kutamiz
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
