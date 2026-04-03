@@ -54,7 +54,7 @@
               <span class="text-white font-bold text-lg">EDU</span>
             </div>
 
-            <p class="text-white font-bold text-xl mb-0.5">EduUz</p>
+            <p class="text-white font-bold text-xl mb-0.5">InkTalim.Uz</p>
             <p class="text-gray-400 text-xs mb-6">Online Ta'lim Platformasi</p>
 
             <h1
@@ -88,7 +88,7 @@
               </div>
               <div class="text-center sm:text-right">
                 <p class="text-gray-500 text-[10px] uppercase tracking-widest mb-0.5">Imzo</p>
-                <p class="text-primary-400 italic text-sm">EduUz Ta'lim Platformasi</p>
+                <p class="text-primary-400 italic text-sm">InkTalim.Uz Ta'lim Platformasi</p>
               </div>
             </div>
           </div>
@@ -170,7 +170,7 @@ async function handleDownload() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `EduUz-Sertifikat-${certNumber}.pdf`
+    a.download = `InkTalim.Uz-Sertifikat-${certNumber}.pdf`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)

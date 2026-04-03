@@ -26,13 +26,13 @@
             class="w-8 h-8 rounded-xl flex items-center justify-center flex-shrink-0"
             style="background: linear-gradient(135deg, #4840B3, #6C63FF, #857EFA)"
           >
-            <span class="text-white font-black text-sm leading-none">E</span>
+            <span class="text-white font-black text-sm leading-none">I</span>
           </div>
           <span
             class="text-base font-black bg-clip-text text-transparent"
             style="background-image: linear-gradient(135deg, #4840B3, #6C63FF, #857EFA); -webkit-background-clip: text;"
           >
-            EduUz
+            InkTalim
           </span>
         </RouterLink>
         <span
@@ -114,6 +114,7 @@
         </div>
 
         <div class="flex items-center gap-2">
+          <FontSizeToggle />
           <ThemeToggle />
 
           <!-- User dropdown -->
@@ -212,6 +213,7 @@ import {
   ChevronDown,
 } from 'lucide-vue-next'
 import ThemeToggle from '@/components/ui/ThemeToggle.vue'
+import FontSizeToggle from '@/components/ui/FontSizeToggle.vue'
 import AppAvatar from '@/components/ui/AppAvatar.vue'
 import { useAuthStore } from '@/stores/auth.js'
 

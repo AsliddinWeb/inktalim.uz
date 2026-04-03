@@ -84,7 +84,7 @@ async function handleDownload() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = `EduUz-Sertifikat-${props.certificate.certificate_number}.pdf`
+    a.download = `InkTalim-Sertifikat-${props.certificate.certificate_number}.pdf`
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)

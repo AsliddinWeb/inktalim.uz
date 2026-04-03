@@ -13,9 +13,9 @@
         <div class="lg:col-span-2">
           <div class="flex items-center gap-2.5 mb-4">
             <div class="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center">
-              <span class="text-white font-black text-sm">E</span>
+              <span class="text-white font-black text-sm">I</span>
             </div>
-            <span class="text-xl font-black text-white">EduUz</span>
+            <span class="text-xl font-black text-white">InkTalim.Uz</span>
           </div>
           <p class="text-sm text-gray-400 leading-relaxed max-w-xs mb-5">
             O'zbekistondagi bepul online ta'lim platformasi.
@@ -74,7 +74,7 @@
       <!-- ─── Pastki chiziq ───────────────────────────────────────────── -->
       <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-xs text-gray-500 text-center sm:text-left">
-          © 2026 EduUz. Barcha huquqlar himoyalangan.
+          © 2026 InkTalim.Uz. Barcha huquqlar himoyalangan.
         </p>
         <p class="text-xs text-gray-600">
           O'zbek tilidagi bepul ta'lim platformasi

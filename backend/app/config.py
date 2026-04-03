@@ -11,12 +11,12 @@ class Settings(BaseSettings):
     # PostgreSQL ulanish sozlamalari
     POSTGRES_HOST: str = "db"
     POSTGRES_PORT: int = 5432
-    POSTGRES_DB: str = "mini_udemy"
+    POSTGRES_DB: str = "inktalim"
     POSTGRES_USER: str = "postgres"
     POSTGRES_PASSWORD: str = "password"
 
     # Async SQLAlchemy uchun to'liq URL
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:password@db:5432/mini_udemy"
+    DATABASE_URL: str = "postgresql+asyncpg://postgres:password@db:5432/inktalim"
 
     # JWT sozlamalari
     SECRET_KEY: str = "change-this-secret-key-in-production"

@@ -1,7 +1,7 @@
 {
-  "name": "mini-udemy-frontend",
+  "name": "inktalim-frontend",
   "version": "1.0.0",
-  "description": "EduUz — O'zbek tilidagi bepul online ta'lim platformasi",
+  "description": "InkTalim.Uz — O'zbek tilidagi bepul online ta'lim platformasi",
   "type": "module",
   "scripts": {
     "dev": "vite",

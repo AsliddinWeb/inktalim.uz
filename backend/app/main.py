@@ -27,17 +27,17 @@ async def lifespan(app: FastAPI):
     """Ilova ishga tushganda va to'xtatilganda bajariladigan ishlar."""
     # Ishga tushish — media papkalarini yaratish
     _ensure_media_dirs()
-    print(f"Mini Udemy backend ishga tushdi — muhit: {settings.ENVIRONMENT}")
+    print(f"InkTalim backend ishga tushdi — muhit: {settings.ENVIRONMENT}")
     print(f"Media papkasi: {Path(settings.MEDIA_DIR).resolve()}")
     yield
     # To'xtatish
-    print("Mini Udemy backend to'xtatildi.")
+    print("InkTalim backend to'xtatildi.")
 
 
 # FastAPI ilovasi
 app = FastAPI(
-    title="Mini Udemy API",
-    description="Online kurs platformasi uchun REST API",
+    title="InkTalim API",
+    description="InkTalim.Uz — online ta'lim platformasi API",
     version="1.0.0",
     docs_url="/docs",        # Swagger UI
     redoc_url="/redoc",      # ReDoc UI
@@ -69,7 +69,7 @@ async def root():
     """API ishlayotganini tekshirish uchun."""
     return {
         "status": "ok",
-        "message": "Mini Udemy API ishlayapti",
+        "message": "InkTalim API ishlayapti",
         "version": "1.0.0",
         "docs": "/docs",
     }

@@ -10,7 +10,7 @@
           Afzalliklar
         </span>
         <h2 class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white mb-4">
-          Nega aynan EduUz?
+          Nega aynan InkTalim.Uz?
         </h2>
         <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
           Biz O'zbekistondagi eng qulay va bepul online ta'lim platformasi bo'lishga intilamiz.

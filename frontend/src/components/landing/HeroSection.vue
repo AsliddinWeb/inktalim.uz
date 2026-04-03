@@ -50,7 +50,7 @@
 
           <!-- Tavsif -->
           <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-            EduUz — O'zbek tilidagi bepul kurslar platformasi.
+            InkTalim.Uz — O'zbek tilidagi bepul kurslar platformasi.
             Istalgan joydan, istalgan vaqtda o'qing.
           </p>
 
@@ -114,10 +114,10 @@
               <!-- Platform logo katta -->
               <div class="flex items-center gap-3 mb-6">
                 <div class="w-12 h-12 rounded-2xl gradient-primary flex items-center justify-center">
-                  <span class="text-white text-xl font-black">E</span>
+                  <span class="text-white text-xl font-black">I</span>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg">EduUz</p>
+                  <p class="text-white font-bold text-lg">InkTalim.Uz</p>
                   <p class="text-gray-400 text-xs">Online Ta'lim</p>
                 </div>
               </div>
@@ -162,7 +162,7 @@
                 </div>
                 <div>
                   <p class="text-amber-300 text-xs font-semibold">Sertifikat olindi!</p>
-                  <p class="text-gray-400 text-xs">Vue.js kursi — EDUUZ-2024-AB3X9</p>
+                  <p class="text-gray-400 text-xs">Vue.js kursi — INKTALIM-2024-AB3X9</p>
                 </div>
               </div>
             </div>

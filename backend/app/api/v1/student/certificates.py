@@ -253,6 +253,6 @@ async def download_certificate(
     return FileResponse(
         path=cert.pdf_path,
         media_type="application/pdf",
-        filename=f"EduUz-Sertifikat-{certificate_number}.pdf",
-        headers={"Content-Disposition": f'attachment; filename="EduUz-Sertifikat-{certificate_number}.pdf"'},
+        filename=f"InkTalim-Sertifikat-{certificate_number}.pdf",
+        headers={"Content-Disposition": f'attachment; filename="InkTalim-Sertifikat-{certificate_number}.pdf"'},
     )

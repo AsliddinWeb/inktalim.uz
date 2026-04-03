@@ -1,4 +1,4 @@
-# EduUz — Mini Udemy Platformasi
+# InkTalim.Uz — Online Ta'lim Platformasi
 
 Online kurs platformasi. Foydalanuvchilar kurs ko'radi va progressini kuzatadi; adminlar kurs, dars va foydalanuvchilarni boshqaradi.
 
@@ -32,10 +32,10 @@ cp .env.example .env
 `.env` ichidagi qiymatlarni to'ldiring:
 
 ```env
-POSTGRES_DB=mini_udemy
+POSTGRES_DB=inktalim
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=yourpassword
-DATABASE_URL=postgresql+asyncpg://postgres:yourpassword@db:5432/mini_udemy
+DATABASE_URL=postgresql+asyncpg://postgres:yourpassword@db:5432/inktalim
 SECRET_KEY=your-very-secret-key-at-least-32-chars
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30

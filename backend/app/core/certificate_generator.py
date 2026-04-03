@@ -68,10 +68,10 @@ def _transliterate(text: str) -> str:
 
 
 def generate_certificate_number() -> str:
-    """EDUUZ-YYYY-XXXXX formatida noyob raqam yaratish."""
+    """INKTALIM-YYYY-XXXXX formatida noyob raqam yaratish."""
     year = datetime.now().year
     suffix = "".join(random.choices(string.ascii_uppercase + string.digits, k=5))
-    return f"EDUUZ-{year}-{suffix}"
+    return f"INKTALIM-{year}-{suffix}"
 
 
 def _draw_background(c: rl_canvas.Canvas, w: float, h: float) -> None:
@@ -126,7 +126,7 @@ def generate_certificate(
     Args:
         full_name: Foydalanuvchi toʻliq ismi
         course_title: Kurs nomi
-        certificate_number: EDUUZ-YYYY-XXXXX
+        certificate_number: INKTALIM-YYYY-XXXXX
         issued_at: Berilgan sana
         output_path: PDF saqlash yoʻli
     """
@@ -191,7 +191,7 @@ def generate_certificate(
     # ─── Platform nomi ────────────────────────────────────────────────────────
     c.setFont("Helvetica-Bold", 22)
     c.setFillColor(TEXT_WHITE)
-    c.drawCentredString(page_w / 2, logo_cy - 22 * mm, "EduUz")
+    c.drawCentredString(page_w / 2, logo_cy - 22 * mm, "InkTalim.Uz")
 
     c.setFont("Helvetica", 9)
     c.setFillColor(TEXT_MUTED)
@@ -275,7 +275,7 @@ def generate_certificate(
     c.drawRightString(right_x, bottom_y, "IMZO")
     c.setFont("Helvetica-Oblique", 10)
     c.setFillColor(PRIMARY)
-    c.drawRightString(right_x, bottom_y - 5 * mm, "EduUz Ta'lim Platformasi")
+    c.drawRightString(right_x, bottom_y - 5 * mm, "InkTalim.Uz Ta'lim Platformasi")
 
     # ─── Saqlash ─────────────────────────────────────────────────────────────
     c.save()

@@ -26,7 +26,7 @@
           <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">
             <span class="text-white font-black text-lg">E</span>
           </div>
-          <span class="text-2xl font-bold tracking-tight">EduUz</span>
+          <span class="text-2xl font-bold tracking-tight">InkTalim.Uz</span>
         </div>
 
         <!-- O'rta: Sarlavha, tavsif, xususiyatlar -->

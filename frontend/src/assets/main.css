@@ -22,7 +22,10 @@
     --color-sidebar: #130F1E;
   }
   * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  html.text-sm { font-size: 14px; }
+  html.text-base { font-size: 16px; }
+  html.text-lg { font-size: 18px; }
   body {
     background-color: var(--color-bg);
     color: var(--color-text-primary);

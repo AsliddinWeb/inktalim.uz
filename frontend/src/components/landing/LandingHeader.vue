@@ -11,13 +11,13 @@
         <!-- ─── Logo ────────────────────────────────────────────────────── -->
         <RouterLink to="/" class="flex items-center gap-2.5 flex-shrink-0">
           <div class="w-8 h-8 rounded-xl gradient-primary flex items-center justify-center">
-            <span class="text-white text-sm font-black">E</span>
+            <span class="text-white text-sm font-black">I</span>
           </div>
           <span
             class="text-xl font-black bg-clip-text text-transparent"
             style="background-image: linear-gradient(135deg, #4840B3, #6C63FF, #857EFA)"
           >
-            EduUz
+            InkTalim.Uz
           </span>
         </RouterLink>
 
@@ -38,6 +38,7 @@
 
         <!-- ─── O'ng qism ─────────────────────────────────────────────── -->
         <div class="flex items-center gap-2">
+          <FontSizeToggle />
           <ThemeToggle />
 
           <!-- Login bo'lgan user -->
@@ -147,6 +148,7 @@ import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 import { Menu, X, LayoutDashboard } from 'lucide-vue-next'
 import ThemeToggle from '@/components/ui/ThemeToggle.vue'
+import FontSizeToggle from '@/components/ui/FontSizeToggle.vue'
 
 const scrolled    = ref(false)
 const mobileOpen  = ref(false)

@@ -33,7 +33,7 @@ nano .env
 `.env` da o'zgartirish kerak:
 ```env
 POSTGRES_PASSWORD=SuperKuchliParol123!
-DATABASE_URL=postgresql+asyncpg://postgres:SuperKuchliParol123!@db:5432/mini_udemy
+DATABASE_URL=postgresql+asyncpg://postgres:SuperKuchliParol123!@db:5432/inktalim
 SECRET_KEY=kamida-32-ta-tasodifiy-belgi-bu-yerga
 ENVIRONMENT=production
 ALLOWED_ORIGINS=https://inktalim.asliddin.me,https://www.inktalim.asliddin.me,https://inktalim.uz,https://www.inktalim.uz
@@ -110,5 +110,5 @@ docker compose logs -f frontend
 docker compose restart
 
 # DB ga kirish
-docker compose exec db psql -U postgres -d mini_udemy
+docker compose exec db psql -U postgres -d inktalim
 ```

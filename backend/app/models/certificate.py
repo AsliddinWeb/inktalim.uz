@@ -44,7 +44,7 @@ class Certificate(Base):
         index=True,
     )
 
-    # Noyob sertifikat raqami: EDUUZ-2024-XXXXX formatida
+    # Noyob sertifikat raqami: INKTALIM-2024-XXXXX formatida
     certificate_number: Mapped[str] = mapped_column(
         String(30),
         unique=True,
